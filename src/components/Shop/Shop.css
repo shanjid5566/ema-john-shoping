@@ -25,3 +25,14 @@
     justify-content: space-between;
     align-items: center;
 }
+.btnContainer{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.btnContainer button{
+    margin: 0 10px;
+}
+.selected{
+    background: #FF9900;
+}
