@@ -23,10 +23,10 @@ const Shop = () => {
   console.log(pages);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch(`http://localhost:5000/products?page=${currentPage}&size=${itemsPerPage}`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
-  }, []);
+  }, [currentPage,itemsPerPage  ]);
 
   useEffect(() => {
     const storedCart = getShoppingCart();
@@ -131,7 +131,6 @@ const Shop = () => {
           value={itemsPerPage}
           onChange={handleItemsPerPage}
         >
-          <option value="5">5</option>
           <option value="10">10</option>
           <option value="20">20</option>
           <option value="50">50</option>
